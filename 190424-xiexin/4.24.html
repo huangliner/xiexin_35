@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<script type="text/javascript">
+			function num(value, index, arr) {
+				var wtf = value.constructor == Number? true : false;
+			}
+			var x =[2,4,{x:2,y:3},true,[5,6]];
+			document.write(x.every(num)+"<br/>"); 
+			function numRange(value, index, arr) {
+				if (value>=2&&value<=10)
+					return true;
+				else
+					return false;
+			}
+			var y =[1,6,3,9];
+			document.write(y.every(numRange)+"<br/>");
+			function num2(value,index,arr){
+				if (value.constructor == Number)
+					return false;
+				else
+					return true;
+				
+			}
+			var q=[2,4,{x:2,y:3},true,[5,6]];
+			document.write(q.some(num2)+"<br/>");    
+		
+		</script>
+	</head>
+	<body>
+	</body>
+</html>
