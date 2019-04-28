@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+	</head>
+	<body>
+		<script type="text/javascript">
+			function y1(){
+				var yu=0;
+				for(var i=0;i<arguments.length;i++){
+					yu+=arguments[i];
+				}
+				return yu;
+			}
+			function y2(){
+				
+			}
+			document.write(y1.call(y2,2,5,8,0)+'<br />')
+			function y3(){
+				var yu=0;
+				for(var i=0;i<arguments.length;i++){
+					yu+=arguments[i];
+				}
+				return yu;
+			}
+			function y4(){
+				
+			}
+			document.write(y3.apply(y4,[2,5,8,0])+'<br/>')
+			
+			
+			
+			var a=[1,4,2,6,8,0];
+			var gu=Math.max.apply(null,a);
+			document.write(gu);
+		</script>
+	</body>
+</html>
