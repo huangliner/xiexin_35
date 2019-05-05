@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<script type="text/javascript">
+			function CerateObject(a,d){
+				var obj=new Object();
+				
+				obj.name=a;
+				obj.age=d;
+				obj.c=function(){
+					console.log('我叫'+obj.name+'.今年'+obj.age+'岁了');
+				};
+				return obj;
+			}
+			var x=CerateObject('小胖墩',18);
+			x.c();
+		</script>
+	</head>
+	<body>
+	</body>
+</html>
