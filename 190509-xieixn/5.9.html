@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		
+		<style type="text/css">
+			*{padding: 0;margin: 0;}
+			#xie{width: 500px;font-size: 20px;margin: 20px auto;text-align: center;}
+		</style>
+		
+	</head>
+	<body>
+	
+		<p id="xie">
+			
+		</p>
+		
+		<script type="text/javascript">
+			function dateCount() {
+				var date = new Date();
+				var until = new Date('2019-05-15 00:00:00');
+				var days = (until - date) / 1000 / 3600 / 24;
+				var day = Math.floor(days);
+				var hours = (days - day) * 24;
+				var hour = Math.floor(hours);
+				var minutes = (hours - hour) * 60;
+				var minute = Math.floor(minutes);
+				var seconds = (minutes - minute) * 60;
+				var second = Math.floor(seconds);
+				
+				var back = '剩余' + day + '天' + hour + '小时' + minute + '分钟' + second + '秒';
+				return back;
+			}
+			
+			var xie = document.getElementById("xie");
+			setInterval(function() {
+				var text = dateCount();
+				xie.innerText = text;
+			}, 1000)
+		</script>
+	</body>
+</html>
