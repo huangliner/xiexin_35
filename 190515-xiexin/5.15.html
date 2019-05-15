@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<style type="text/css" >
+			*{
+				margin: 0;
+				padding: 0;
+			}
+			#ul{
+				width: 500px;
+				height: 200px;
+				border: 1px solid gray;
+			}
+			#ul li{
+				list-style: none;
+				display: block;
+				float: left;
+				width: 100px;
+				height: 30px;	
+				text-align: center;
+				line-height: 30px;
+				background: lightblue;
+				border-bottom: 1px solid gray;
+			}
+			#ul .bbq{
+				background: lightblue;
+				border-bottom: 1px solid gray;
+			}
+			#ul .b{
+				background: lightblue;
+				border-bottom: 0px solid gray;
+			}
+			#ul li a{
+				text-decoration: none;
+				color: black;
+			}
+			div{
+				position: absolute;
+				top: 30px;
+				width: 500px;
+				height: 170px;
+				/* border: 1px solid red; */
+				
+			}
+			.boxs{
+				display: block;
+			}
+			.box{
+				display: none;
+			}
+			div p{
+				
+				width: 250px;
+				height: 85px;
+				/* border: 1px solid red; */
+				float: left;
+				text-align: center;
+				line-height: 85px;
+			}
+		</style>
+	</head>
+	<body>
+		<ul id="ul">
+			<li class="b"><a href="#">公告</a></li>
+			<li class="bbq"><a href="#">规则</a></li>
+			<li><a href="#">论坛</a></li>
+			<li><a href="#">安全</a></li>
+			<li><a href="#">公益</a></li>
+			<div class="boxs">
+				<p>数据七夕:金牛爱送玫瑰</p>
+				<p>10万家店60万新品</p>
+				<p>阿里打造"互联网监管"</p>
+				<p>全球品大网上时装周</p>
+			</div>
+			<div class="box">
+				<p>"全额返现"要管控啦</p>
+				<p>炒信规则调整意见反馈</p>
+				<p>淘宝新规发布汇总((7月)</p>
+				<p>质量相关规则近期变更</p>
+			</div>
+			<div class="box">
+				<p>接次文件，毁了一家店</p>
+				<p>新版阿里110上线了</p>
+				<p>联号安全神器阿里钱盾</p>
+				<p>卖家学违禁通免被处罚</p>
+			</div>
+			<div class="box">
+				<p>数据七夕:金牛爱送玫瑰</p>
+				<p>10万家店60万新品</p>
+				<p>阿里打造"互联网监管"</p>
+				<p>全球品大网上时装周</p>
+			</div>
+			<div class="box">
+				<p>"全额返现"要管控啦</p>
+				<p>炒信规则调整意见反馈</p>
+				<p>淘宝新规发布汇总((7月)</p>
+				<p>质量相关规则近期变更</p>
+			</div>
+		</ul>
+		<script>
+			window.onload=function(){
+				var ye=document.getElementsByTagName('li');
+				var odiv=document.getElementsByTagName('div');
+				for (var i = 0; i < ye.length; i++) {
+					ye[i].index=i;
+					ye[i].onclick=function() {
+						for (var i=0;i<ye.length;i++){
+							ye[i].className="bbq";
+						}
+						ye[this.index].className="b";
+						for (var j=0;j<odiv.length;j++) {
+							odiv[j].style.display="none";
+						}
+						odiv[this.index].style.display="block";
+					};
+				};
+			};
+		</script>
+	</body>
+</html>
